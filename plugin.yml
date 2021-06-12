@@ -1,0 +1,5 @@
+name: JoinForAddSlot
+api: [3.0.0, 4.0.0]
+main: MelidaZ\Main
+version: 1.0
+author: MelidaZ
