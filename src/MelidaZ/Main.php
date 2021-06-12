@@ -6,6 +6,7 @@ use pocketmine\event\Listener;
 use pocketmine\event\server\QueryRegenerateEvent;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Config;
+use pocketmine\Server;
 
 class Main extends PluginBase implements Listener
 {
