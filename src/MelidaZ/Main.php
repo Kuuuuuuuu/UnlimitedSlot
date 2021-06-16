@@ -13,18 +13,15 @@ class Main extends PluginBase implements Listener
 	
     private $config;
     public function onEnable () {
-    	$this->server->getLogger()->debug("JoinAddSlot Enable");
-        $this->saveResource( "slot.yml" );
-        $this->config = new Config( $this->getDataFolder() . "slot.yml", Config::YAML );
+    	$this->server->getLogger()->debug("UnlimitedSlot Enable");
         $this->getServer()->getPluginManager()->registerEvents( $this, $this );
     }
 
     public function onDisable () {
-    	$this->server->getLogger()->debug("JoinAddSlot Disable");
-        $this->config->save();
+    	$this->server->getLogger()->debug("UnlimitedSlot Disable");
     }
 
-    public function RegenSlot ( QueryRegenerateEvent $ev ) {
-        $ev->setMaxPlayerCount( $ev->getPlayerCount() + $this->config->get( "JoinAddSlot" ) );
+    public function RegenSlot (QueryRegenerateEvent $ev ) {
+        $ev->setMaxPlayerCount($ev->getPlayerCount() + 1);
     }
 }
